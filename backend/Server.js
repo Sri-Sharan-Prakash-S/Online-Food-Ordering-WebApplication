@@ -5,6 +5,7 @@ import foodRouter from "./routes/foodRoute.js"
 import userRouter from "./routes/UserRoute.js"
 import 'dotenv/config'
 import cartRouter from "./routes/cartRoute.js"
+import orderRouter from "./routes/orderRoute.js"
 
 const app=express()
 const port=4000
@@ -16,6 +17,7 @@ app.use(cors())
 connectDB();
 
 app.use("/api/food",foodRouter)
+app.use("/api/order",orderRouter)
 app.use("/api/cart",cartRouter)
 app.use("/images",express.static('uploads'))
 app.use("/api/user",userRouter)

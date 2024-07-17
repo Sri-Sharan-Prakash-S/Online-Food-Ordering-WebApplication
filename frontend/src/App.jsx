@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import Navbar from './Components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home/Home'
+import Pay from './Pages/Pay/Pay'
 import Placeorder from './Pages/Placeorder/Placeorder'
 import Cart from './Pages/Cart/Cart'
+import Payment from './Pages/payment/Payment'
 import Footer from './Components/Footer/Footer'
 import LoginPopup from './Components/LoginPopup/LoginPopup'
 const App = () => {
@@ -18,6 +20,8 @@ const App = () => {
         <Route path='/' element={<Home/>} />
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/order' element={<Placeorder/>}/>
+        <Route path='/payment' element={<Payment/>}/>
+        <Route path='/pay' element={<Pay/>}/>
       </Routes>
     </div>
     <Footer/>
