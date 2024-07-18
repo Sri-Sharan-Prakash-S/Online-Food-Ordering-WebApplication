@@ -7,7 +7,7 @@
     align-items: start;
     justify-content: space-between;
     gap: 50px;
-    margin-top: 150px;
+    margin-top:60px;
 }
 
 .expiry-cvc{
@@ -18,7 +18,7 @@
 
 
 
-.btn{
+.card .btn{
     background-color:blue;
     padding: 10px 60px;
     border-radius: 7px;
@@ -26,6 +26,22 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     cursor: pointer;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details img{
+    width: 50px;
+    cursor: pointer;
+}
+
+.img{
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 
@@ -67,6 +83,19 @@
 .expiry-cvc input{
     padding: 10px;
     border-radius: 7px;
+}
+
+.qr img{
+    width: 200px;
+}
+
+.qr{
+    padding: 70px;
+}
+
+.qr p{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .card-details p{

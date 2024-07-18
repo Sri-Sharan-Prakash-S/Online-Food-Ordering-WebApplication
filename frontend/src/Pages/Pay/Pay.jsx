@@ -3,10 +3,14 @@ import { useContext } from 'react'
 import './Pay.css'
 import { StoreContext } from '../../Context/StoreContext'
 import { Navigate, useNavigate } from 'react-router-dom'
+import { assets } from '../../asset/assets'
+import { useState } from 'react'
 
 const Pay = () => {
     const {cartItem,food_list,removeFromCart,getTotalCartAmount,url}=useContext(StoreContext);
   const navigate=useNavigate();
+  const [pay,setPay]=useState(false);
+  console.log(pay);
   return (
     <div className='container'>
         <div className="cart-totals">
@@ -16,7 +20,7 @@ const Pay = () => {
             return(
               <div>
               <div className="cart-items-title cart-items-item">
-                <p>Food <br></br> {index+1}</p>
+                <img src={assets.parcel_icon} alt="" />
                 <img src={url+"/images/"+item.image} alt="" />
                 <p>{item.name}</p>
                 <p>${item.price*cartItem[item._id]}</p>
@@ -47,7 +51,11 @@ const Pay = () => {
         </div>
         <div className="card-details">
             <h2>PAYMENT</h2>
-            <div className="card-number">
+            <div className="img">
+            <img onClick={()=>setPay(false)} src={assets.card} alt=""/>
+            <img onClick={()=>setPay(true)} src={assets.gpay} alt="" />
+            </div>
+            {pay===false?<div className="card"><div className="card-number">
 
                 <p>Card Number</p>
                 <br />
@@ -73,6 +81,8 @@ const Pay = () => {
             <br />
             <button className='btn'>Pay</button>
             <br />
+            </div>:<div className='qr'><img src={assets.qr} alt="" /></div>}
+            
         </div>
     </div>
   )

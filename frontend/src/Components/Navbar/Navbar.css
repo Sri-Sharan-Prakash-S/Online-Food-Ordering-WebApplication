@@ -6,7 +6,7 @@
 }
 
 .navbar .logo{
-    width: 150px;
+    width: 70px;
 }
 
 .navbar-menu{
@@ -25,6 +25,12 @@
 
 .navbar-profile{
     position: relative;
+}
+
+.foodie{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-profile-dropdown{
@@ -98,7 +104,7 @@
 
 @media(max-width:1050px){
     .navbar .logo{
-        width: 140px;
+        width: 70px;
     }
     .navbar-menu{
         gap:20px;
@@ -117,7 +123,7 @@
 
 @media(max-width:900px){
     .navbar .logo{
-        width: 120px;
+        width: 70px;
     }
     .navbar-menu{
         gap:15px;
